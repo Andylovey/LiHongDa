@@ -1,0 +1,19 @@
+.detail-head-contain{background: #ff6600; width: 100%; position: fixed; top: 0; z-index: 999;}
+.detail-head-contain .detail-head-content{padding: 20rpx; color: #fff;}
+.detail-head-contain .detail-head-content .detail-head-item{margin-bottom: 14rpx; font-size: 30rpx; line-height: 30rpx;}
+.detail-head-contain .detail-head-content .order-number{font-size: 34rpx; line-height: 34rpx; font-weigth: bold;}
+.detail-head-contain .detail-head-content .detail-head-item-right{float: right; font-size: 38rpx; line-height: 38rpx; font-weigth: bold; position: relative; bottom: 88px; right: 30rpx;}
+.detail-head-contain .detail-sum{background: #ff822f; padding: 20rpx 0;}
+.detail-head-contain .detail-sum .detail-sum-item{width: 25%; text-align: center; display: inline-block;}
+.detail-head-contain .detail-sum .detail-sum-item .detail-sum-item-title{margin-bottom: 14rpx; font-size: 30rpx; line-height: 30rpx; color: #ffcaa6;}
+.detail-head-contain .detail-sum .detail-sum-item .detail-sum-item-number{font-size: 30rpx; line-height: 30rpx; color: #fff;}
+
+.detail-contain{padding-top: 475rpx; padding-bottom: 112rpx;}
+.detail-contain .detail-item{padding: 16rpx; border-bottom: 1px solid #cccccc;}
+.detail-contain .detail-item .title{font-size: 30rpx; line-height: 38rpx; color: #000;}
+.detail-contain .detail-item .time{font-size: 30rpx; line-height: 30rpx; color: #999999;}
+.detail-contain .detail-item .number{float: right; font-size: 30rpx; line-height: 30rpx; color: #000; z-index: 997; display: inline-block;}
+
+.detail-footer{background: #fff; width: calc(100% - 20rpx); height: 84rpx; padding: 14rpx 10rpx; position: fixed; bottom: 0; text-align: center; z-index: 998; display: inline-block;}
+.detail-footer .btn-content{width: 33.3%; display: inline-block;}
+.detail-footer .btn-content .btn-tast{background-color: #ff6600 !important; width: 230rpx; height: 80rpx; font-size: 30rpx; line-height: 80rpx; display: inline-block;}

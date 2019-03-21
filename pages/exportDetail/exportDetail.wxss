@@ -1,0 +1,17 @@
+.detail-head-contain{background: #ff6600; width: 100%; position: fixed; top: 0; z-index: 999;}
+.detail-head-contain .detail-head-content{padding: 20rpx; padding-bottom: 0; color: #fff;}
+.detail-head-contain .detail-head-content:last-child{padding-bottom: 20rpx;}
+.detail-head-contain .detail-head-content .detail-head-item{margin-bottom: 14rpx; font-size: 32rpx; line-height: 32rpx;}
+.detail-head-contain .detail-head-content .order-number{font-size: 36rpx; line-height: 36rpx; font-weigth: bold;}
+.detail-head-contain .detail-head-content .detail-head-item-right{float: right; font-size: 38rpx; line-height: 38rpx; font-weigth: bold; position: relative; bottom: 30px; right: 30rpx;}
+.detail-head-contain .detail-sum{background: #ff822f; padding: 20rpx 0;}
+.detail-head-contain .detail-sum .detail-sum-item{width: 25%; text-align: center; display: inline-block;}
+.detail-head-contain .detail-sum .detail-sum-item .detail-sum-item-title{margin-bottom: 14rpx; font-size: 32rpx; line-height: 32rpx; color: #ffcaa6;}
+.detail-head-contain .detail-sum .detail-sum-item .detail-sum-item-number{font-size: 32rpx; line-height: 32rpx; color: #fff;}
+
+.detail-contain{padding-top: 480rpx; padding-bottom: 112rpx;}
+.detail-contain .detail-item{padding: 16rpx; border-bottom: 1px solid #cccccc;}
+.detail-contain .detail-item .title{font-size: 32rpx; line-height: 38rpx; color: #000;}
+.detail-contain .detail-item .spec{font-size: 30rpx; line-height: 34rpx; color: #999999;}
+.detail-contain .detail-item .number{float: right; margin-left: 50rpx; font-size: 32rpx; line-height: 32rpx; color: #ff6600; position: relative; bottom: 64rpx; z-index: 997; display: inline-block;}
+.detail-contain .detail-item .unit{color: #000; display: inline-block;}

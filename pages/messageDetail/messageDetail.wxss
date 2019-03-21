@@ -1,0 +1,8 @@
+.message-head-contain{background: #ff6600; width: 100%; position: fixed; top: 0; text-align: center; display: inline-block;}
+.message-head-contain .order-type{padding: 20rpx 0 0; font-size: 32rpx; line-height: 34rpx; color: #ffcc00;}
+.message-head-contain .order-number{padding: 20rpx 0 32rpx; font-size: 34rpx; line-height: 34rpx; color: #fff;}
+
+.message-contain{padding: 170rpx 30rpx 130rpx 30rpx; background: #fff; font-size: 32rpx; line-height: 34rpx; color: #666666;}
+
+.message-footer{background: #fff; width: 100%; position: fixed; bottom: 0; display: inline-block;}
+.btn-check-detail{background-color: #ff6600 !important; height: 80rpx; margin: 10rpx; font-size: 32rpx; line-height: 80rpx;}

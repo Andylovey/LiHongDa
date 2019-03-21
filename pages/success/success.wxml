@@ -1,0 +1,8 @@
+<view class="success">
+    <icon type="success" size="100" class="icon" />
+    <view class="text">操作成功</view>
+</view>
+<view class="footer">振业车云提供技术支持服务</view>
+<view class="success-footer">
+    <button class="btn-success" type="primary" bindtap="confirm">确定</button>
+</view>

@@ -1,0 +1,23 @@
+<view class="search-contain">
+    <input class="search-content" type="text" placeholder="" value="{{searchData}}" bindinput="inputSearchData" />
+    <button class="btn-search" type="primary" bindtap="search">搜索</button>
+</view>
+<view class="message-contain">
+    <view class="message-item" wx:for="{{messageListInfo}}">
+        <navigator url="/pages/messageDetail/messageDetail?id={{item.ns_id}}" hover-class="none">
+            <view class="message-title">
+                <view class="title">[<view class='state'>{{item.c_state}}</view>][<view class="type">{{item.ns_type}}</view>]【{{item.ns_content}}】</view>
+                <view class="btn-detail">
+                    <image class="message-arrow" src="../../images/arrow-gray.png"></image>
+                </view>
+            </view>
+            <view class="message-content">
+                <view class="message-content-item">{{item.ns_time}}</view>
+            </view>
+        </navigator>
+    </view>
+
+    <view class="no-data" wx:if="{{messageListInfo.length == 0}}">
+        <view class="text">没有更多的数据</view>
+    </view>
+</view>

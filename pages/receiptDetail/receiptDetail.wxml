@@ -1,0 +1,16 @@
+<view class="detail-head-contain">
+    <view class="detail-head-content">
+        <view class="detail-head-item order-number">订单编号：{{receipt_order}}</view>
+        <view class="detail-head-item">供应商：{{spr_name}}</view>
+        <view class="detail-head-item">日期：{{reco_date}}</view>
+        <view class="detail-head-item">经办人：{{staff_name}}</view>
+    </view>
+</view>
+<view class="detail-contain">
+    <view class="detail-item" wx:for="{{items}}">
+        <view class="title">{{item.pro_code}}</view>
+        <view class="title">{{item.pro_name}}</view>
+        <view class="spec">{{item.pro_spec}}</view>
+        <view class="number">{{item.reci_num}}<view class="unit">{{item.unit_name}}</view></view>
+    </view>
+</view>

@@ -1,0 +1,19 @@
+.detail-head-contain{background: #ff6600; width: 100%; position: fixed; top: 0; z-index: 999;}
+.detail-head-contain .detail-head-content{padding: 20rpx; color: #fff;}
+.detail-head-contain .detail-head-content .detail-head-item{margin-bottom: 14rpx; font-size: 30rpx; line-height: 30rpx;}
+.detail-head-contain .detail-head-content .order-number{font-size: 34rpx; line-height: 34rpx; font-weigth: bold;}
+.detail-head-contain .detail-head-content .detail-head-item-right{float: right; font-size: 38rpx; line-height: 38rpx; font-weigth: bold; position: relative; bottom: 88px; right: 30rpx;}
+.detail-head-contain .detail-sum{background: #ff822f; padding: 20rpx 0;}
+.detail-head-contain .detail-sum .detail-sum-item{width: 25%; text-align: center; display: inline-block;}
+.detail-head-contain .detail-sum .detail-sum-item .detail-sum-item-title{margin-bottom: 14rpx; font-size: 30rpx; line-height: 30rpx; color: #ffcaa6;}
+.detail-head-contain .detail-sum .detail-sum-item .detail-sum-item-number{font-size: 30rpx; line-height: 30rpx; color: #fff;}
+
+.detail-contain{padding: 510rpx 24rpx 140rpx 24rpx;}
+.detail-contain .detail-contain-item{margin-bottom: 14rpx;}
+.detail-contain .detail-contain-item .title{font-size: 30rpx; line-height: 40rpx; color: #000; text-align: left; display: inline-block;}
+.detail-contain .detail-contain-item .number{width: 530rpx; height: 60rpx; padding:0 10rpx; margin-left: 20rpx; border: 1rpx solid #7a7a7a; font-size: 30rpx; line-height: 30rpx; text-align: right; display: inline-block;}
+.detail-contain .detail-contain-item .text{width: 530rpx; height: 60rpx; padding:0 10rpx; margin-left: 20rpx; border: 1rpx solid #7a7a7a; font-size: 30rpx; line-height: 30rpx; text-align: left; display: inline-block;}
+.detail-contain .detail-contain-item .text .weui-input{width: 100%; height: 38rpx; padding: 0 10rpx; font-size: 30rpx; line-height: 60rpx; display: inline-block;}
+
+.detail-footer{background: #fff; width: 100%; position: fixed; bottom: 0; display: inline-block;}
+.btn-stop{background-color: #ff6600 !important; height: 80rpx; margin: 10rpx; font-size: 30rpx; line-height: 80rpx;}

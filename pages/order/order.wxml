@@ -1,0 +1,43 @@
+<view class="search-contain">
+    <view class="search-filter">
+        <picker bindchange="bindOrderStatusPickerChange" value="{{orderStatusIndex}}" range="{{orderStatus}}">
+            <view class="weui-input text">{{orderStatus[orderStatusIndex]}}</view>
+        </picker>
+    </view>
+    <input class="search-content" type="text" placeholder="" value="{{searchData}}" bindinput="inputSearchData" />
+    <image class="search-scan" src="../../images/scan.png" bindtap="bindSearchScan" ></image>
+    <button class="btn-search" type="primary" bindtap="search" >搜索</button>
+</view>
+<view class="order-contain">
+    <view class="order-item" wx:for="{{orderListInfo}}">
+        <view class="order-title">
+            <view class="title">{{item.sog_serialno}}</view>
+            <view class="btn-detail">
+                <navigator url="/pages/orderDetail/orderDetail?id={{item.sog_id}}" hover-class="none">
+                    <view class="text">详情</view>
+                    <image class="order-arrow" src="../../images/arrow-white.png"></image>
+                </navigator>
+            </view>
+        </view>
+        <view class="order-content">
+            <view class="order-content-item">客户名称：{{item.clt_name}}</view>
+            <view class="order-content-item">产品名称：{{item.sog_product}}</view>
+            <view class="order-content-item">规格：{{item.sog_spec}}</view>
+            <view class="order-content-item">数量：{{item.sog_num}}</view>
+            <view class="order-content-item">单价：{{item.sog_price}}</view>
+            <view class="order-content-item-right">￥{{item.sog_total}}</view>
+        </view>
+        <view class="order-footer">
+            <view class="order-status">{{item.sog_status}}</view>
+            <view class="order-number">
+                <view class="order-number-item">已入库：{{item.in_num}}</view>
+                <view class="order-number-item">已发货：{{item.out_num}}</view>
+                <view class="order-number-item">库存：{{item.repertory_num}}</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="no-data" wx:if="{{orderListInfo.length == 0}}">
+        <view class="text">没有更多的数据</view>
+    </view>
+</view>

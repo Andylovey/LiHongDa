@@ -1,0 +1,8 @@
+<view class="message-head-contain">
+    <view class="order-type">{{ns_type}}</view>
+    <view class="order-number">{{generalNo}}</view>
+</view>
+<view class="message-contain">{{content}}</view>
+<view class="message-footer">
+    <button class="btn-check-detail" type="primary" bindtap="checkDetail">查看订单</button>
+</view>

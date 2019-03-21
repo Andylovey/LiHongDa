@@ -1,0 +1,58 @@
+<view class="user-contain">
+    <navigator url="/pages/user/user" hover-class="none" >
+        <image class="user-img" src="../../images/user-img.png"></image>
+        <view class="user-name">{{username}}</view>
+        <image class="btn-arrow" src="../../images/arrow-white.png"></image>
+    </navigator>
+</view>
+<view class="mine-contain" wx:if="{{customerRight == 104}}">
+    <view class="mine-content">
+        <view class="mine-item">
+            <navigator url="/pages/customer/customer" hover-class="none">
+                <image class="mine-icon" src="../../images/icon-customer.png"></image>
+                <view class="mine-title">我的客户</view>
+                <image class="mine-arrow" src="../../images/arrow-gray.png"></image>
+            </navigator>
+        </view>
+    </view>
+</view>
+
+<view class="mine-contain" wx:if="{{orderRight == 136 || tastRight == 148}}">
+    <view class="mine-content">
+        <view class="mine-item" wx:if="{{orderRight == 136}}">
+            <navigator url="/pages/order/order" hover-class="none">
+                <image class="mine-icon" src="../../images/icon-order.png"></image>
+                <view class="mine-title">我的订单</view>
+                <image class="mine-arrow" src="../../images/arrow-gray.png"></image>
+            </navigator>
+        </view>
+        <view class="mine-item" wx:if="{{tastRight == 148}}">
+            <navigator url="/pages/tast/tast" hover-class="none">
+                <image class="mine-icon" src="../../images/icon-tast.png"></image>
+                <view class="mine-title">生产任务</view>
+                <image class="mine-arrow" src="../../images/arrow-gray.png"></image>
+            </navigator>
+        </view>
+    </view>
+</view>
+
+<view class="mine-contain" wx:if="{{noticeRight == 301 || messageRight == 339}}">
+    <view class="mine-content">
+        <view class="mine-item" wx:if="{{noticeRight == 301}}">
+            <navigator url="/pages/notice/notice" hover-class="none">
+                <image class="mine-icon" src="../../images/icon-notice.png"></image>
+                <view class="mine-title">公司通知</view>
+                <view class="mine-number">{{noticeNumber}}</view>
+                <image class="mine-arrow" src="../../images/arrow-gray.png"></image>
+            </navigator>
+        </view>
+        <view class="mine-item" wx:if="{{messageRight == 339}}">
+            <navigator url="/pages/message/message" hover-class="none">
+                <image class="mine-icon" src="../../images/icon-message.png"></image>
+                <view class="mine-title">我的通知消息</view>
+                <view class="mine-number">{{messageNumber}}</view>
+                <image class="mine-arrow" src="../../images/arrow-gray.png"></image>
+            </navigator>
+        </view>
+    </view>
+</view>

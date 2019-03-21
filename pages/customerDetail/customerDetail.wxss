@@ -1,0 +1,12 @@
+.detail-head-contain{background: #ff6600; width: 100%; position: fixed; top: 0; text-align: center;}
+.detail-head-contain .title{padding: 20rpx; font-size: 34rpx; line-height: 34rpx; color: #fff;}
+
+.detail-contain{padding: 94rpx 20rpx 132rpx 20rpx; background: #fff;}
+.detail-contain .detail-item{border-bottom: 1px dashed #cccccc; font-size: 32rpx; line-height: 54rpx; color: #666666;}
+.detail-contain .detail-item .title{display: inline-block;}
+.detail-contain .detail-item .content{float: right; margin-right: 30rpx; text-align: right; display: inline-block;}
+
+.detail-footer{background: #ff6600; width: 100%; padding: 20rpx 0; position: fixed; bottom: 0;}
+.detail-footer .detail-footer-item{width: 25%; text-align: center; display: inline-block;}
+.detail-footer .detail-footer-item .detail-footer-item-title{margin-bottom: 14rpx; font-size: 32rpx; line-height: 32rpx; color: #ffcaa6;}
+.detail-footer .detail-footer-item .detail-footer-item-number{font-size: 32rpx; line-height: 32rpx; color: #fff;}

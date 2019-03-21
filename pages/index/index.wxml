@@ -1,0 +1,13 @@
+<view class="login">
+    <image class="logo" src="../../images/logo.jpg"></image>
+    <view class="input-contain">
+        <view class="input-title">用户名</view>
+        <input class="input-content" type="text" value="{{username}}" bindinput="inputUserName" />
+    </view>
+    <view class="input-contain">
+        <view class="input-title">密　码</view>
+        <input class="input-content" type="text" password value="{{password}}" bindinput="inputpassWord" />
+    </view>
+    <button class="btn-login" type="primary" bindtap="login">登　录</button>
+</view>
+<view class="footer">振业车云提供技术支持服务</view>

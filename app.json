@@ -1,0 +1,35 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/user/user",
+    "pages/password/password",
+    "pages/customer/customer",
+    "pages/customerDetail/customerDetail",
+    "pages/order/order",
+    "pages/orderDetail/orderDetail",
+    "pages/tast/tast",
+    "pages/tastList/tastList",
+    "pages/tastDetail/tastDetail",
+    "pages/tastDetailStop/tastDetailStop",
+    "pages/tastDetailContinue/tastDetailContinue",
+    "pages/tastDetailSwitch/tastDetailSwitch",
+    "pages/tastDetailFinish/tastDetailFinish",
+    "pages/notice/notice",
+    "pages/noticeDetail/noticeDetail",
+    "pages/message/message",
+    "pages/messageDetail/messageDetail",
+    "pages/receiptDetail/receiptDetail",
+    "pages/importDetail/importDetail",
+    "pages/exportDetail/exportDetail",
+    "pages/confirm/confirm",
+    "pages/success/success",
+    "pages/fail/fail"
+  ],
+  "window":{
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ff6600",
+    "navigationBarTitleText": "印刷生产管理系统",
+    "navigationBarTextStyle": "white"
+  }
+}

@@ -1,0 +1,16 @@
+page{background: #e8e8e8;}
+
+.user-contain{background: linear-gradient(#ff6600, #ff3400); height: 140rpx; padding: 30rpx 34rpx 50rpx; margin-bottom: 36rpx;}
+.user-contain .user-img{width: 150rpx; height: 150rpx; border-radius: 150rpx; margin-right: 30rpx;}
+.user-contain .user-name{font-size: 38rpx; color: #fff; position: relative; bottom: 60rpx; display: inline-block;}
+.user-contain .btn-arrow{float: right; width: 16rpx; height: 26rpx; position: relative; top: 64rpx;}
+
+.mine-contain{margin-bottom: 36rpx; border-top: 1px solid #d2d2d2; border-bottom: 1px solid #d2d2d2;}
+.mine-contain .mine-content{background: #fff; padding: 0 0 0 34rpx;}
+.mine-contain .mine-content .mine-item{border-bottom: 1px solid #d2d2d2; padding: 20rpx 0 16rpx;}
+.mine-contain .mine-content .mine-item:last-child{border-bottom: 0;}
+.mine-contain .mine-content .mine-item .mine-icon{width: 40rpx; height: 40rpx; margin-right: 30rpx; position: relative; top: 3rpx;}
+.mine-contain .mine-content .mine-item .mine-title{font-size: 32rpx; color: #000; margin-right: 20rpx; position: relative; bottom: 5rpx; display: inline-block;}
+.mine-contain .mine-content .mine-item .mine-number{background: #ff0101; width: 32rpx; height: 32rpx; border-radius: 32rpx; font-size: 24rpx; line-height: 32rpx; color: #fff; position: relative; bottom: 8rpx; text-align: center;
+ display: inline-block;}
+.mine-contain .mine-content .mine-item .mine-arrow{float: right; width: 16rpx; height: 26rpx; position: relative; top: 8rpx; right: 30rpx;}

@@ -1,0 +1,9 @@
+.fail{text-align: center; background-color: #fff; height: 1000rpx; margin: auto; position: absolute; top: 0; left: 0; right: 0; bottom: 0;}
+.fail .icon{margin-bottom: 30rpx;}
+.fail .text{text-align: center; font-size: 34rpx; line-height: 50rpx;}
+.fail .info{text-align: center; font-size: 32rpx; line-height: 50rpx; color: #999999;}
+
+.footer{color: #999999; position: absolute; bottom: 0; width: 100%; text-align: center; font-size: 30rpx; line-height: 140rpx;}
+
+.fail-footer{background: #fff; width: 100%; position: fixed; bottom: 0; display: inline-block;}
+.btn-fail{background-color: #ff6600 !important; height: 80rpx; margin: 10rpx; font-size: 30rpx; line-height: 80rpx;}

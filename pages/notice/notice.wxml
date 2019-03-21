@@ -1,0 +1,23 @@
+<view class="search-contain">
+    <input class="search-content" type="text" placeholder="" value="{{searchData}}" bindinput="inputSearchData" />
+    <button class="btn-search" type="primary" bindtap="search">搜索</button>
+</view>
+<view class="notice-contain">
+    <view class="notice-item" wx:for="{{noticeListInfo}}">
+        <navigator url="/pages/noticeDetail/noticeDetail?id={{item.nl_id}}" hover-class="none">
+            <view class="notice-title">
+                <view class="title">{{item.nl_title}}</view>
+                <view class="btn-detail">
+                    <image class="notice-arrow" src="../../images/arrow-gray.png"></image>
+                </view>
+            </view>
+            <view class="notice-content">
+                <view class="notice-content-item">发布日期：{{item.nl_releasedate}}</view>
+            </view>
+        </navigator>
+    </view>
+
+    <view class="no-data" wx:if="{{noticeListInfo.length == 0}}">
+        <view class="text">没有更多的数据</view>
+    </view>
+</view>

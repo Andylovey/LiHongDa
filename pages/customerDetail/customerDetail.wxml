@@ -1,0 +1,55 @@
+<view class="detail-head-contain">
+    <view class="title">{{clt_name}}</view>
+</view>
+<view class="detail-contain">
+    <view class="detail-item">
+        <view class="title">联系人：</view>
+        <view class="content">{{clt_contact}}</view>
+    </view>
+    <view class="detail-item">
+        <view class="title">性别：</view>
+        <view class="content">{{clt_sex}}</view>
+    </view>
+    <view class="detail-item">
+        <view class="title">联系电话：</view>
+        <view class="content">{{clt_telephone}}</view>
+    </view>
+    <view class="detail-item">
+        <view class="title">手机号：</view>
+        <view class="content">{{clt_cellphone}}</view>
+    </view>
+    <view class="detail-item">
+        <view class="title">微信号：</view>
+        <view class="content">{{clt_wechat}}</view>
+    </view>
+    <view class="detail-item">
+        <view class="title">QQ号码：</view>
+        <view class="content">{{clt_qq}}</view>
+    </view>
+    <view class="detail-item">
+        <view class="title">地址：</view>
+        <view class="content">{{clt_address}}</view>
+    </view>
+    <view class="detail-item">
+        <view class="title">邮箱：</view>
+        <view class="content">{{clt_email}}</view>
+    </view>
+</view>
+<view class="detail-footer">
+    <view class="detail-footer-item">
+        <view class="detail-footer-item-title">订单数量</view>
+        <view class="detail-footer-item-number">{{order_num}}</view>
+    </view>
+    <view class="detail-footer-item">
+        <view class="detail-footer-item-title">订单总额</view>
+        <view class="detail-footer-item-number">{{order_money}}</view>
+    </view>
+    <view class="detail-footer-item">
+        <view class="detail-footer-item-title">存货数量</view>
+        <view class="detail-footer-item-number">{{store_num}}</view>
+    </view>
+    <view class="detail-footer-item">
+        <view class="detail-footer-item-title">存货总额</view>
+        <view class="detail-footer-item-number">{{store_money}}</view>
+    </view>
+</view>

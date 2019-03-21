@@ -1,0 +1,11 @@
+<view class="tast-contain">
+    <view class="tast-item" wx:for="{{workshop}}">
+        <navigator url="/pages/tastList/tastList?id={{item.id}}&name={{item.name}}" hover-class="none">
+            <view class="content">
+                <view class="parent">
+                   <view class="chlid">{{item.name}}</view>
+                </view>
+            </view>
+        </navigator>
+    </view>
+</view>

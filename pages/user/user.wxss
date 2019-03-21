@@ -1,0 +1,10 @@
+.user-contain{background: #fff;}
+.user-contain .user-item{padding: 22rpx 34rpx; border-bottom: 1px solid #cccccc;}
+.user-contain .user-item .user-title{font-size: 32rpx; line-height: 40rpx; color: #000;}
+.user-contain .user-item .user-title .title{display: inline-block;}
+.user-contain .user-item .user-title .name{float: right; color: #999999; display: inline-block;}
+.user-contain .user-item .user-title .btn-detail{float: right; position: relative; top: 4rpx; display: inline-block;}
+.user-contain .user-item .user-title .btn-detail .user-arrow{width: 16rpx; height: 26rpx;}
+
+.user-footer{background: #fff; width: 100%; position: fixed; bottom: 0; display: inline-block;}
+.btn-logout{background-color: #990000 !important; height: 80rpx; margin: 10rpx; font-size: 32rpx; line-height: 80rpx;}

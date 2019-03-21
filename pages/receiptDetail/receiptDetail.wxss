@@ -1,0 +1,11 @@
+.detail-head-contain{background: #ff6600; width: 100%; position: fixed; top: 0; z-index: 999;}
+.detail-head-contain .detail-head-content{padding: 20rpx; color: #fff;}
+.detail-head-contain .detail-head-content .detail-head-item{margin-bottom: 14rpx; font-size: 32rpx; line-height: 32rpx;}
+.detail-head-contain .detail-head-content .order-number{font-size: 36rpx; line-height: 36rpx; font-weigth: bold;}
+
+.detail-contain{padding-top: 230rpx; padding-bottom: 112rpx;}
+.detail-contain .detail-item{padding: 16rpx; border-bottom: 1px solid #cccccc;}
+.detail-contain .detail-item .title{font-size: 32rpx; line-height: 38rpx; color: #000;}
+.detail-contain .detail-item .spec{font-size: 30rpx; line-height: 34rpx; color: #999999;}
+.detail-contain .detail-item .number{float: right; font-size: 34rpx; line-height: 32rpx; color: #ff6600; position: relative; bottom: 64rpx; z-index: 997; display: inline-block;}
+.detail-contain .detail-item .unit{font-size: 32rpx; line-height: 32rpx; color: #000; display: inline-block;}

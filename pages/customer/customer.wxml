@@ -1,0 +1,25 @@
+<view class="search-contain">
+    <input class="search-content" type="text" placeholder="" value="{{searchData}}" bindinput="inputSearchData" />
+    <button class="btn-search" type="primary" bindtap="search">搜索</button>
+</view>
+<view class="customer-contain">
+    <view class="customer-item" wx:for="{{customerListInfo}}">
+        <navigator url="/pages/customerDetail/customerDetail?id={{item.clt_id}}" hover-class="none">
+            <view class="customer-title">
+                <view class="title">{{item.clt_name}}</view>
+                <view class="btn-detail">
+                    <image class="customer-arrow" src="../../images/arrow-gray.png"></image>
+                </view>
+            </view>
+            <view class="customer-content">
+                <view class="customer-content-item">联系人：{{item.clt_contact}}</view>
+                <view class="customer-content-item" wx:if="{{item.clt_sex}}">性别：女</view><view class="customer-content-item" wx:else>性别：男</view>
+                <view class="customer-content-item" wx:if="{{item.clt_telephone != null}}">联系电话：{{item.clt_telephone}}</view><view class="customer-content-item" wx:else>联系电话：</view>
+            </view>
+        </navigator>
+    </view>
+
+    <view class="no-data" wx:if="{{customerListInfo.length == 0}}">
+        <view class="text">没有更多的数据</view>
+    </view>
+</view>

@@ -1,0 +1,7 @@
+.login{text-align: center; background-color: #fff; height: 800rpx; margin: auto; padding: 0 135rpx; position: absolute; top: 0; left: 0; right: 0; bottom: 0;}
+.login .logo{height: 350rpx; width: 350rpx;}
+.login .input-contain{margin-bottom: 14rpx; height: 74rpx; line-height: 74rpx;}
+.login .input-contain .input-title{color: #ff6600; font-size: 32rpx; line-height: 32rpx; display: inline-block;}
+.login .input-contain .input-content{width: 340rpx; height: 60rpx; padding:0 10rpx; margin-left: 20rpx; border: 1rpx solid #7a7a7a; font-size: 32rpx; line-height: 32rpx; color: #000; text-align: left; display: inline-block;}
+.login .btn-login{background: #ff6600; height: 80rpx; font-size: 32rpx; line-height: 80rpx; margin-left: 2rpx; margin-right: 2rpx;}
+.footer{color: #999999; position: absolute; bottom: 0; width: 100%; text-align: center; font-size: 30rpx; line-height: 140rpx;}

@@ -1,0 +1,29 @@
+<view class="user-contain">
+    <view class="user-item">
+        <view class="user-title">
+            <view class="title">用户名</view>
+            <view class="name">{{username}}</view>
+        </view>
+    </view>
+
+    <view class="user-item">
+        <view class="user-title">
+            <view class="title">职务</view>
+            <view class="name">{{position}}</view>
+        </view>
+    </view>
+    
+    <view class="user-item">
+        <navigator url="/pages/password/password" hover-class="none">
+            <view class="user-title">
+                <view class="title">修改密码</view>
+                <view class="btn-detail">
+                    <image class="user-arrow" src="../../images/arrow-gray.png"></image>
+                </view>
+            </view>
+        </navigator>
+    </view>
+</view>
+<view class="user-footer">
+    <button class="btn-logout" type="primary" bindtap="logout">退出登录</button>
+</view>

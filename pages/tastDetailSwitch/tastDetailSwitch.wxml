@@ -1,0 +1,66 @@
+<view class="detail-head-contain">
+    <view class="detail-head-content">
+        <view class="detail-head-item order-number">订单编号：{{tl_number}}</view>
+        <view class="detail-head-item">客户名称：{{clt_name}}</view>
+        <view class="detail-head-item">产品名称：{{sog_product}}</view>
+        <view class="detail-head-item">规格：{{sog_spec}}</view>
+        <view class="detail-head-item">拼版数：{{sog_makeup_num}}</view>
+        <view class="detail-head-item">工序：{{process_name}}</view>
+        <view class="detail-head-item">机台：{{machine_name}}</view>
+        <view class="detail-head-item-right">{{tl_status}}</view>
+    </view>
+    <view class="detail-sum">
+        <view class="detail-sum-item">
+            <view class="detail-sum-item-title">任务数量</view>
+            <view class="detail-sum-item-number">{{tl_tasknum}}</view>
+        </view>
+        <view class="detail-sum-item">
+            <view class="detail-sum-item-title">已完成</view>
+            <view class="detail-sum-item-number">{{tl_finishednum}}</view>
+        </view>
+        <view class="detail-sum-item">
+            <view class="detail-sum-item-title">未完成</view>
+            <view class="detail-sum-item-number">{{tl_unfinishednum}}</view>
+        </view>
+        <view class="detail-sum-item">
+            <view class="detail-sum-item-title">已转交</view>
+            <view class="detail-sum-item-number">{{tl_transfer}}</view>
+        </view>
+    </view>
+</view>
+<view class="detail-contain">
+    <view class="detail-contain-item">
+        <view class="title">可转交数量：{{tl_transfernum}}</view>
+    </view>
+    <view class="detail-contain-item">
+        <view class="title">转交数量</view>
+        <input class="number" type="number" placeholder="" bindinput="inputSwitchdNumber" />
+    </view>
+    <view class="detail-contain-item">
+        <view class="title">车　　间</view>
+        <view class="text">
+            <picker bindchange="bindWorkShopPickerChange" value="{{workShopIndex}}" range="{{workShopNameArray}}">
+                <view class="weui-input">{{workShopNameArray[workShopIndex]}}</view>
+            </picker>
+        </view>
+    </view>
+    <view class="detail-contain-item">
+        <view class="title">工　　序</view>
+        <view class="text">
+            <picker bindchange="bindWorkShopProcessPickerChange" value="{{workShopProcessIndex}}" range="{{workShopProcessName}}">
+                <view class="weui-input">{{workShopProcessName[workShopProcessIndex]}}</view>
+            </picker>
+        </view>
+    </view>
+    <view class="detail-contain-item">
+        <view class="title">机　　台</view>
+        <view class="text">
+            <picker bindchange="bindMachinePickerChange" value="{{machineIndex}}" range="{{machineName}}">
+                <view class="weui-input">{{machineName[machineIndex]}}</view>
+            </picker>
+        </view>
+    </view>
+</view>
+<view class="detail-footer">
+    <button class="btn-stop" type="primary" bindtap="taskSwitch">确认转交</button>
+</view>

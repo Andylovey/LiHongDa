@@ -1,0 +1,9 @@
+<view class="confirm">
+    <icon type="info" size="100" class="icon" />
+    <view class="text">订单编号：{{orderNumber}}</view>
+    <view class="text">确定要{{orderTast}}此任务吗？</view>
+</view>
+<view class="footer">振业车云提供技术支持服务</view>
+<view class="confirm-footer">
+    <button class="btn-confirm" type="primary" bindtap="confirm">确定</button>
+</view>

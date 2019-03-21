@@ -1,0 +1,52 @@
+<view class="detail-head-contain">
+    <view class="detail-head-content">
+        <view class="detail-head-item order-number">订单编号：{{tl_number}}</view>
+        <view class="detail-head-item">客户名称：{{clt_name}}</view>
+        <view class="detail-head-item">产品名称：{{sog_product}}</view>
+        <view class="detail-head-item">规格：{{sog_spec}}</view>
+        <view class="detail-head-item">拼版数：{{sog_makeup_num}}</view>
+        <view class="detail-head-item">工序：{{process_name}}</view>
+        <view class="detail-head-item">机台：{{machine_name}}</view>
+        <view class="detail-head-item-right">{{tl_status}}</view>
+    </view>
+    <view class="detail-sum">
+        <view class="detail-sum-item">
+            <view class="detail-sum-item-title">任务数量</view>
+            <view class="detail-sum-item-number">{{tl_tasknum}}</view>
+        </view>
+        <view class="detail-sum-item">
+            <view class="detail-sum-item-title">已完成</view>
+            <view class="detail-sum-item-number">{{tl_finishednum}}</view>
+        </view>
+        <view class="detail-sum-item">
+            <view class="detail-sum-item-title">未完成</view>
+            <view class="detail-sum-item-number">{{tl_unfinishednum}}</view>
+        </view>
+        <view class="detail-sum-item">
+            <view class="detail-sum-item-title">已转交</view>
+            <view class="detail-sum-item-number">{{tl_transfer}}</view>
+        </view>
+    </view>
+</view>
+<view class="detail-contain">
+    <view class="detail-item" wx:for="{{tasklog}}">
+        <view class="title">{{item.log_type}}
+            <view class="number">已完成数量：{{item.log_finishednum}}</view>
+        </view>
+        <view class="time">{{item.log_operatetime}}
+            <view class="number">已转交数量：{{item.log_transfernum}}</view>
+        </view>
+    </view>
+</view>
+<view class="detail-footer">
+    <view class="btn-content">
+        <button class="btn-tast" type="primary" data-status="{{tl_status}}" data-id="{{tl_id}}" data-number="{{tl_number}}" bindtap="tastDetailStart" >开始</button>
+    </view>
+    <view class="btn-content">
+        <button class="btn-tast" type="primary" data-status="{{tl_status}}" data-id="{{tl_id}}" wx:if="{{tl_status == '未开始' || tl_status == '生产中' || tl_status == '已完成'}}" bindtap="tastDetailStop" >暂停</button>
+        <button class="btn-tast" type="primary" data-status="{{tl_status}}" data-id="{{tl_id}}" wx:elif="{{tl_status == '已暂停'}}" bindtap="tastDetailContinue" >继续</button>
+    </view>
+    <view class="btn-content">
+        <button class="btn-tast" type="primary" data-status="{{tl_status}}" data-id="{{tl_id}}" bindtap="tastDetailFinish" >完成</button>
+    </view>
+</view>

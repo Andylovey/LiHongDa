@@ -1,0 +1,25 @@
+<view class="detail-head-contain">
+    <view class="detail-head-content">
+        <view class="detail-head-item order-number">订单编号：{{export_order}}</view>
+        <view class="detail-head-item">客户名称：{{clt_name}}</view>
+        <view class="detail-head-item">日期：{{spe_date}}</view>
+        <view class="detail-head-item">联系人：{{clt_contact}}</view>
+        <view class="detail-head-item">联系电话：{{clt_cellphone}}</view>
+        <view class="detail-head-item-right">￥{{spe_totalmoney}}</view>
+    </view>
+    <view class="detail-head-content">
+        <view class="detail-head-item">司机：{{transport_name}}</view>
+        <view class="detail-head-item">联系电话：{{spe_transport_tel}}</view>
+        <view class="detail-head-item">车牌号：{{car_no}}</view>
+        <view class="detail-head-item">经办人：{{staff_name}}</view>
+    </view>
+</view>
+<view class="detail-contain">
+    <view class="detail-item" wx:for="{{items}}">
+        <view class="title">{{item.pro_code}}</view>
+        <view class="title">{{item.pro_name}}</view>
+        <view class="spec">{{item.pro_spec}}</view>
+        <view class="number">￥{{item.exi_salestotal}}</view>
+        <view class="number">{{item.exi_num}}<view class="unit">{{item.unit_name}}</view></view>
+    </view>
+</view>

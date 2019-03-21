@@ -1,0 +1,16 @@
+<view class="detail-head-contain">
+    <view class="detail-head-content">
+        <view class="detail-head-item order-number">订单编号：{{input_order}}</view>
+        <view class="detail-head-item">日期：{{ino_date}}</view>
+        <view class="detail-head-item">对应业务单：{{business_order}}</view>
+        <view class="detail-head-item">经办人：{{staff_name}}</view>
+    </view>
+</view>
+<view class="detail-contain">
+    <view class="detail-item" wx:for="{{items}}">
+        <view class="title">{{item.pro_name}}</view>
+        <view class="spec">{{item.pro_spec}}</view>
+        <view class="spec">{{item.ini_way}}入库，每箱数量{{item.ini_avgnum}}，共{{item.ini_packages}}箱</view>
+        <view class="number">{{item.ini_num}}<view class="unit">{{item.unit_name}}</view></view>
+    </view>
+</view>

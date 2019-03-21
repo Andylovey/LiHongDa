@@ -1,0 +1,37 @@
+<view class="detail-head-contain">
+    <view class="detail-head-content">
+        <view class="detail-head-item order-number">订单编号：{{tl_number}}</view>
+        <view class="detail-head-item">客户名称：{{clt_name}}</view>
+        <view class="detail-head-item">产品名称：{{sog_product}}</view>
+        <view class="detail-head-item">规格：{{sog_spec}}</view>
+        <view class="detail-head-item">拼版数：{{sog_makeup_num}}</view>
+        <view class="detail-head-item">工序：{{process_name}}</view>
+        <view class="detail-head-item">机台：{{machine_name}}</view>
+        <view class="detail-head-item-right">{{tl_status}}</view>
+    </view>
+    <view class="detail-sum">
+        <view class="detail-sum-item">
+            <view class="detail-sum-item-title">任务数量</view>
+            <view class="detail-sum-item-number">{{tl_tasknum}}</view>
+        </view>
+        <view class="detail-sum-item">
+            <view class="detail-sum-item-title">已完成</view>
+            <view class="detail-sum-item-number">{{tl_finishednum}}</view>
+        </view>
+        <view class="detail-sum-item">
+            <view class="detail-sum-item-title">未完成</view>
+            <view class="detail-sum-item-number">{{tl_unfinishednum}}</view>
+        </view>
+        <view class="detail-sum-item">
+            <view class="detail-sum-item-title">已转交</view>
+            <view class="detail-sum-item-number">{{tl_transfer}}</view>
+        </view>
+    </view>
+</view>
+<view class="detail-contain">
+    <view class="title">录入已完成数量</view>
+    <input class="number" type="number" placeholder="" bindinput="inputFinishedNumber" />
+</view>
+<view class="detail-footer">
+    <button class="btn-stop" type="primary" bindtap="taskFinish">确认完成</button>
+</view>

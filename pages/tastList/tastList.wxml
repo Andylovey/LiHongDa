@@ -1,0 +1,49 @@
+<view class="search-contain">
+    <view class="search-filter">
+        <picker bindchange="bindOrderStatusPickerChange" value="{{orderStatusIndex}}" range="{{orderStatus}}">
+            <view class="weui-input text">{{orderStatus[orderStatusIndex]}}</view>
+        </picker>
+    </view>
+    <input class="search-content" type="text" placeholder="" value="{{searchData}}" bindinput="inputSearchData"/>
+    <image class="search-scan" src="../../images/scan.png" bindtap="bindSearchScan" ></image>
+    <button class="btn-search" type="primary" bindtap="search" >搜索</button>
+</view>
+<view class="tast-contain">
+    <view class="tast-item" wx:for="{{orderListInfo}}">
+        <view class="tast-title">
+            <view class="title">{{item.tl_number}}</view>
+            <view class="btn-detail">
+                <navigator url="/pages/tastDetail/tastDetail?id={{item.tl_id}}" hover-class="none">
+                    <view class="text">详情</view>
+                    <image class="tast-arrow" src="../../images/arrow-white.png"></image>
+                </navigator>
+            </view>
+        </view>
+        <view class="tast-content">
+            <view class="tast-content-item">客户名称：{{item.clt_name}}</view>
+            <view class="tast-content-item">产品名称：{{item.sog_product}}</view>
+            <view class="tast-content-item">规格：{{item.sog_spec}}</view>
+            <view class="tast-content-item">拼版数：{{item.sog_makeup_num}}</view>
+            <view class="tast-content-item">工序：{{item.process_name}}</view>
+            <view class="tast-content-item">机台：{{item.machine_name}}</view>
+            <view class="tast-content-item-right {{item.tl_status_style}}">{{item.tl_status}}</view>
+            <view class="tast-content-item">
+                <view class="tast-number">
+                    <view class="tast-number-item">任务数量：{{item.tl_tasknum}}</view>
+                    <view class="tast-number-item">已完成：{{item.tl_finishednum}}</view>
+                    <view class="tast-number-item">未完成：{{item.tl_unfinishednum}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="tast-footer">
+            <view class="btn-tast" data-status="{{item.tl_status}}" data-id="{{item.tl_id}}" data-number="{{item.tl_number}}" bindtap="tastDetailStart" >开始</view>
+            <view class="btn-tast" data-status="{{item.tl_status}}" data-id="{{item.tl_id}}" wx:if="{{item.tl_status == '未开始' || item.tl_status == '生产中' || item.tl_status == '已完成'}}" bindtap="tastDetailStop" >暂停</view>
+            <view class="btn-tast" data-status="{{item.tl_status}}" data-id="{{item.tl_id}}" wx:elif="{{item.tl_status == '已暂停'}}" bindtap="tastDetailContinue" >继续</view>
+            <view class="btn-tast" data-status="{{item.tl_status}}" data-id="{{item.tl_id}}" bindtap="tastDetailFinish" >完工</view>
+        </view>
+    </view>
+
+    <view class="no-data" wx:if="{{orderListInfo.length == 0}}">
+        <view class="text">没有更多的数据</view>
+    </view>
+</view>

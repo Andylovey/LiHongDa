@@ -1,0 +1,156 @@
+<view class="detail-head-contain">
+    <view class="detail-head-content">
+        <view class="detail-head-item order-number">订单编号：{{serialno}}</view>
+        <view class="detail-head-item">客户名称：{{clt_name}}</view>
+        <view class="detail-head-item">产品名称：{{sog_product}}</view>
+        <view class="detail-head-item">下单日期：{{sog_orderdate}}</view>
+        <view class="detail-head-item">交货日期：{{sog_deliverydate}}</view>
+        <view class="detail-head-item">数量：{{sog_num}}</view>
+        <view class="detail-head-item">单价：{{sog_price}}元</view>
+        <view class="detail-head-item-right">￥{{sog_total}}</view>
+    </view>
+    <view class="detail-sum">
+        <view class="detail-sum-item">
+            <view class="detail-sum-item-title">已完成</view>
+            <view class="detail-sum-item-number">{{sog_finishednum}}</view>
+        </view>
+        <view class="detail-sum-item">
+            <view class="detail-sum-item-title">已入库</view>
+            <view class="detail-sum-item-number">{{in_num}}</view>
+        </view>
+        <view class="detail-sum-item">
+            <view class="detail-sum-item-title">已发货</view>
+            <view class="detail-sum-item-number">{{ex_num}}</view>
+        </view>
+        <view class="detail-sum-item">
+            <view class="detail-sum-item-title">库存量</view>
+            <view class="detail-sum-item-number">{{store_num}}</view>
+        </view>
+    </view>
+</view>
+<view class="detail-contain">
+    <view class="detail-content">
+        <view class="detail-content-title" data-index="0" bindtap="openContent">
+            <view class="title">订单信息</view>
+            <image class="btn-open" src="../../images/{{openImage[0]}}"></image>
+        </view>
+        <view class="detail-item-content" wx:if="{{openStatus[0]}}">
+            <view class="detail-item">
+                <view class="title">上机规格：</view>
+                <view class="content">{{sog_spec}}</view>
+            </view>
+            <view class="detail-item">
+                <view class="title">包装要求：</view>
+                <view class="content">{{packagedemand}}</view>
+            </view>
+            <view class="detail-item">
+                <view class="title">拼版/开纸：</view>
+                <view class="content">{{paperstyle}}</view>
+            </view>
+            <view class="detail-item">
+                <view class="title">拼版数量：</view>
+                <view class="content">{{sog_makeup_num}}</view>
+            </view>
+            <view class="detail-item">
+                <view class="title">模具类型：</view>
+                <view class="content">{{mould}}</view>
+            </view>
+            <view class="detail-item">
+                <view class="title">冲压类型：</view>
+                <view class="content">{{stamping}}</view>
+            </view>
+            <view class="detail-item">
+                <view class="title">印刷要求：</view>
+                <view class="content">{{printdemand}}</view>
+            </view>
+            <view class="detail-item">
+                <view class="title">制作要求：</view>
+                <view class="content">{{sog_requirements}}</view>
+            </view>
+            <view class="detail-item">
+                <view class="title">备注信息：</view>
+                <view class="content remark">{{sog_content}}</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="detail-content">
+        <view class="detail-content-title" data-index="1" bindtap="openContent">
+            <view class="title">所需材料</view>
+            <image class="btn-open" src="../../images/{{openImage[1]}}"></image>
+        </view>
+        <view class="detail-item-content" wx:if="{{openStatus[1]}}">
+            <view class="detail-item" wx:for="{{orderPurchase}}">
+                <view class="name">{{item.sp_name}}</view>
+                <view class="title">规格：{{item.sp_spec}}</view>
+                <view class="content-right">{{item.sp_num}}张</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="detail-content">
+        <view class="detail-content-title" data-index="2" bindtap="openContent">
+            <view class="title">生产工序</view>
+            <image class="btn-open" src="../../images/{{openImage[2]}}"></image>
+        </view>
+        <view class="detail-item-content" wx:if="{{openStatus[2]}}">
+            <view class="detail-item" wx:for="{{salesorderProcess}}">
+                <view class="name">
+                  <text class='workShop'>{{item.workshop}}</text>
+                  <text class='workShop-info'>{{item.workshopFid}} - {{item.workshopProcess}}</text>
+                </view>
+                <view class="title title-size">状态：{{item.status}}</view>
+                <view class="title title-size">已完成：{{item.tl_finishednum}}</view>
+                <view class='title title-size'>未完成：{{item.tl_inproduct}}</view>
+                <view class="content-right-orange">￥{{item.sop_price}}</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="detail-content">
+        <view class="detail-content-title" data-index="3" bindtap="openContent">
+            <view class="title">施工图案</view>
+            <image class="btn-open" src="../../images/{{openImage[3]}}"></image>
+        </view>
+        <view class="detail-item-content" wx:if="{{openStatus[3]}}">
+            <image class="img" mode="aspectFill" wx:for="{{imageList}}" src="{{item.pic_url}}" data-value="{{item}}" bindtap="showImg" data-list="{{item.pic_url}}" data-src='{{item.pic_url}}'></image>
+        </view>
+    </view>
+
+    <view class="detail-content" wx:if="{{mobileByInput.length != 0}}">
+        <view class="detail-content-title" data-index="4" bindtap="openContent">
+            <view class="title">入库情况</view>
+            <image class="btn-open" src="../../images/{{openImage[4]}}"></image>
+        </view>
+        <view class="detail-item-content" wx:if="{{openStatus[4]}}">
+            <view class="detail-item" wx:for="{{mobileByInput}}">
+                <view class="title">{{item.store_date}}</view>
+                <view class="content">{{item.num}}</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="detail-content" wx:if="{{mobileByExport.length != 0}}">
+        <view class="detail-content-title" data-index="5" bindtap="openContent">
+            <view class="title">发货情况</view>
+            <image class="btn-open" src="../../images/{{openImage[5]}}"></image>
+        </view>
+        <view class="detail-item-content" wx:if="{{openStatus[5]}}">
+            <view class="detail-item" wx:for="{{mobileByExport}}">
+                <view class="title">{{item.store_date}}</view>
+                <view class="title">{{item.store_remark}}</view>
+                <view class="content">{{item.num}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="bg" wx:if="{{imgStatus}}" bindtap="hideImg">
+    <image class="big-img" mode="aspectFit" src="{{bigImg}}"></image>
+</view>
+
+
+<view class='fixed-operation'>
+  <button bindtap='auditEv'>{{sog_aduitstatus}}</button>
+  <button bindtap='dispatchEv'>派工</button>
+  <button bindtap='completeEv'>完工</button>
+</view>

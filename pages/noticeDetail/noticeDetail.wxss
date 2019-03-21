@@ -1,0 +1,4 @@
+page{height: calc(100% - 68rpx);}
+.notice-contain{height: 100%; padding: 18rpx; margin: 14rpx; border: 1px solid #e0e0e0;}
+.notice-contain .title{font-size: 36rpx; line-height: 80rpx; border-bottom: 1px solid #ff0000; text-align: center;}
+.notice-contain .content{font-size: 32rpx; line-height: 38rpx; margin-top: 14rpx;}

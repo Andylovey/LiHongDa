@@ -1,0 +1,4 @@
+<view class="notice-contain">
+    <view class="title">{{nl_title}}</view>
+    <view class="content">{{nl_content}}</view>
+</view>

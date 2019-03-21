@@ -1,0 +1,12 @@
+.search-contain{background: #fff; width: 100%; height: 68rpx; padding: 14rpx; border-bottom: 1rpx solid #ccc; position: fixed; top: 0; z-index: 999;}
+.search-contain .search-content{width: 570rpx; height: 68rpx; padding:0 10rpx; margin-right: 14rpx; border: 1rpx solid #7a7a7a; font-size: 32rpx; line-height: 32rpx; text-align: left; display: inline-block;}
+.search-contain .btn-search{width: 110rpx; height: 68rpx; background: #169bd5; padding: 18rpx 0; font-size: 32rpx; line-height: 32rpx; color: #fff; display: inline-block;}
+
+.notice-contain{background: #fff; margin-top: 101rpx;}
+.notice-contain .notice-item{padding: 14rpx 20rpx; border-bottom: 1px solid #cccccc;}
+.notice-contain .notice-item .notice-title{font-size: 32rpx; line-height: 40rpx; color: #000;}
+.notice-contain .notice-item .notice-title .title{display: inline-block;}
+.notice-contain .notice-item .notice-title .btn-detail{float: right; position: relative; top: 18rpx; right: 10rpx; display: inline-block;}
+.notice-contain .notice-item .notice-title .btn-detail .notice-arrow{width: 16rpx; height: 26rpx;}
+.notice-contain .notice-item .notice-content{font-size: 28rpx; line-height: 32rpx;}
+.notice-contain .notice-item .notice-content .notice-content-item{color: #666666;}

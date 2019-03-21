@@ -1,0 +1,9 @@
+<view class="fail">
+    <icon type="warn" size="100" class="icon" />
+    <view class="text">操作失败</view>
+    <view class="info">{{msg}}</view>
+</view>
+<view class="footer">振业车云提供技术支持服务</view>
+<view class="fail-footer">
+    <button class="btn-fail" type="primary" bindtap="confirm">确定</button>
+</view>
